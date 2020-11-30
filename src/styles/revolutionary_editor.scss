@@ -1,0 +1,62 @@
+@import 'variables';
+.revolutionary-editor{
+    text-align: center;
+   &__title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 54px;
+    color: rgb(150, 104, 150);
+   }
+   &__text{
+    max-width: 861px;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: normal;
+    color: $grey-color;
+   }
+   &__btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+   }
+   &__btn{
+    display: flex;
+    border: 2px solid #848E97;;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+    }
+    &__btn-text{
+    border-right: 2px solid #848E97;;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0;
+    font-weight: bold;
+    text-decoration: none;
+    color:#323232;
+    }
+   
+    &__numb{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0;
+    font-weight: bold;
+    text-decoration: none;
+    color:#323232;
+    }
+    &__icon{
+        padding-top: 2px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .revolutionary-editor__title{
+    font-size: 26px;
+    line-height: 28px;
+    }
+}

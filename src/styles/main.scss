@@ -1,0 +1,25 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 320px;
+    width: 100%;
+}
+
+.wrapper {
+    padding: 0 1rem;
+}
+button {
+    cursor: pointer;
+}
+
+ 

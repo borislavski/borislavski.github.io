@@ -1,0 +1,397 @@
+@import "variables";
+@import "reset";
+@import "main";
+
+.header {
+    background-color: $header-bg;
+  
+    &__navigation {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      padding: 3.5rem .5rem;
+    }
+  
+    &__logo {
+      cursor: pointer;
+  
+      &-img {
+        width: 4.3rem;
+        height: 4.1rem;
+        background-image: url("/dist/images/header/logo-1.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      &-text {
+        display: none;
+      }
+    }
+  
+    &__menu {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      top: 100%;
+      width: 95%;
+  
+      .nav {
+        background-color: $mobile-menu-bcg;
+        width: 100%;
+        //display: none;
+        &__list {
+          margin: 0;
+          padding-left: 0;
+          max-width: 815px;
+          list-style-type: none;
+          font-size: 2.6rem;
+          line-height: 2.8rem;
+          color: $white-color;
+        }
+  
+        &__list-item {
+          padding: 1.6rem 0;
+          border-bottom: .3rem solid #3B3B3B;
+        }
+  
+        &__list-item a {
+          display: block;
+          padding-left: 3rem;
+          border-left: .8rem solid transparent;
+        }
+  
+        &__list-item a:hover {
+          color: $light-purple-color;
+          border-left: .8rem solid $light-purple-color;
+        }
+      }
+    }
+  
+    &__button {
+      color: $white-color;
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+      width: 12rem;
+      border: .1rem solid transparent;
+      border-radius: 4rem;
+      background-color: $light-purple-color;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+  }
+  
+  .intro {
+    min-height: 60rem;
+    background-image: url("/src/images/header/img-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+    &__info {
+      &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        // padding-top: 5rem;
+      }
+  
+      &-text-title {
+        font-weight: bold;
+        font-size: 4.8rem;
+        line-height: 5rem;
+        color: $white-color;
+        margin-bottom: 2.5rem;
+      }
+  
+      &-text-subtitle {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        color: $light-purple-color;
+        margin-bottom: 1.6rem;
+      }
+  
+      &-text-version {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        text-transform: uppercase;
+        color: #848E97;
+      }
+    }
+  }
+  
+  .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2.5rem;
+  
+    &__button {
+      background: $light-purple-color;
+      border-radius: 4rem;
+      border: .1rem solid transparent;
+      color: $white-color;
+      font-weight: bold;
+      font-size: 1.8rem;
+      line-height: 2rem;
+      padding: 1.5rem 0;
+      width: 29rem;
+      margin-bottom: 2.8rem;
+    }
+  
+    &__text {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: #848E97;
+    }
+  }
+  
+  //collapsable
+  .collapsable-input {
+    display: none;
+    outline: none;
+    //visibility: hidden;
+  }
+  
+  #collapsable-menu:checked ~ #collapsable {
+    display: block;
+  }
+  
+  .header__switch-label {
+    order: 3;
+    width: 3.7rem;
+    height: 3.7rem;
+    position: relative;
+    // top: 3.5rem;
+    right: 1.5rem;
+    display: block;
+    cursor: pointer;
+    
+  }
+  
+  .header__switch-label span {
+    width: 2.6rem;
+    height: .3rem;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: .3rem;
+  }
+  
+  .header__switch-label span::before {
+    content: '';
+    width: 1.5rem;
+    height: .3rem;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    display: block;
+    position: absolute;
+    top: -1rem;
+    right: 0;
+  }
+  
+  .header__switch-label span::after {
+    content: '';
+    width: 2.6rem;
+    height: .3rem;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+  }
+  
+  #collapsable-menu:checked ~ .header__switch-label > span {
+    transform: rotate(45deg);
+  }
+  
+  #collapsable-menu:checked ~ .header__switch-label > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  
+  #collapsable-menu:checked ~ .header__switch-label > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  @media screen and (min-width: $tablet) {
+    .header {
+      background-color: $header-bg;
+
+      &__navigation {
+        display: flex;
+        flex-wrap: wrap;
+      }
+  
+      &__logo {
+        display: flex;
+        align-items: center;
+  
+        &-img {
+          margin-right: 1.7rem;
+        }
+  
+        &-text {
+          display: inline-block;
+          font-family: "Lato", sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 2.4rem;
+          line-height: 1.6rem;
+          text-transform: uppercase;
+          color: $light-purple-color;
+        }
+      }
+  
+      &__switch-label {
+        display: none;
+      }
+  
+      &__menu {
+        display: flex;
+        position: static;
+        order: 3;
+        flex-basis: 100%;
+        margin-top: 2rem;
+      }
+  
+      .nav {
+        background-color: unset;
+        max-width: 570px;
+        margin: 0 auto;
+  
+        &__list {
+          display: flex;
+          justify-content: space-between;
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+          color: $light-purple-color;
+        }
+  
+        &__list-item {
+          border-bottom: unset;
+          padding: 0;
+        }
+  
+        &__list-item a {
+          border-left: unset;
+          padding-left: 0;
+          font-weight: bold;
+        }
+  
+        &__list-item a:hover {
+          color: $white-color;
+          padding-left: unset;
+          border: unset;
+        }
+      }
+  
+      &__button {
+        width: 14.5rem;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+      }
+  
+      &__button:hover {
+        background-color: $white-color;
+        color: $light-purple-color;
+      }
+    }
+    .intro {
+      &__info-text {
+        &-title {
+          font-size: 7.2rem;
+          line-height: 7.4rem;
+          margin-bottom: 1.5rem;
+        }
+  
+        &-subtitle {
+          font-family: 'Lato', sans-serif;
+          font-size: 2.4rem;
+          line-height: 2.6rem;
+        }
+      }
+    }
+    .action {
+      margin-top: -3.5rem;
+  
+      &__button {
+        width: 39rem;
+        padding: 2.5rem 0;
+      }
+  
+      &__button:hover {
+        background-color: $white-color;
+        color: $light-purple-color;
+        border-color: $light-purple-color;
+      }
+    }
+  }
+  
+  @media screen and (min-width: $desctop) {
+    .header {
+      background-color: #010005;
+      font-weight: bold;
+  
+      &__navigation {
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 3.5rem 3rem;
+      }
+  
+      &__logo:hover > &__logo-img {
+        background-image: url("/src/images/header/logo-hover.svg");
+      }
+  
+      &__logo:hover > &__logo-text {
+        color: $white-color;
+      }
+  
+      &__menu {
+        order: 2;
+        flex-basis: unset;
+        margin-top: 0;
+        max-width: 52rem;
+        margin-right: 4rem;
+        margin-left: auto;
+      }
+  
+      .nav {
+        display: flex;
+        align-items: center;
+  
+        &__list {
+          width: 100%;
+        }
+      }
+  
+      &__button {
+        order: 3;
+      }
+    }
+    .intro {
+      min-height: 70rem;
+      margin-top: -.1rem;
+      background-position: bottom;
+  
+      &__info-text {
+         padding-top: 0px;
+        &-title {
+          font-size: 8.2rem;
+          line-height: 8.3rem;
+          margin-bottom: 2rem;
+        }
+  
+        &-subtitle {
+          font-size: 3rem;
+          line-height: 3.1rem;
+        }
+      }
+    }
+  }
+  

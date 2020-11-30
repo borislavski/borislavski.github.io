@@ -1,0 +1,129 @@
+.fork-subscription-pricing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/fork-subscribing-pricing-background.png');
+    
+    padding-bottom: 100px;
+    &__price-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__for-columns{
+        display: flex;
+    }
+    &__item{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.151);
+    padding-bottom: 45px;
+    }
+    
+    .main-block-heading{
+        background-color: rgba(0, 0, 0, 0.116);
+        
+    }
+    &__heading{
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 50px;
+    text-align: center;
+    }
+    &__sub-heading{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 0;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.06);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    }
+    &__price{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 90px;
+    color: white;
+    margin-bottom: 0;
+    }
+    &__month{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    }
+    &__line::before{
+    content: '________';
+    color:#8D81AC;
+    }
+    &__discribing{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: white;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    width: 250px;
+    }
+    &__btn{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px 40px;
+    border-radius: 40px;
+    }
+}
+.wider-subscription{
+    padding-bottom: 60px;
+}
+.main-block{
+background: #46304888;
+transform: scale(1.2)
+}
+.clother-item{
+    margin-right: 10px;
+}
+@media screen and (max-width: 1166px) and (min-width:560px){
+    .fork-subscription-pricing__for-columns{
+        margin-bottom: 60px;
+    }
+    .main-block{
+        margin-right: 55px;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 600px) and (min-width:320px){
+.fork-subscription-pricing__for-columns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-block{
+margin-bottom: 70px;
+margin-top: 70px;
+}
+.clother-item{
+margin-bottom: 20px;
+}
+.fork-subscription-pricing__heading{
+font-size: 28px;
+line-height: 42px;
+}
+}

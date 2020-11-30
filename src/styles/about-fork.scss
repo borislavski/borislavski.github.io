@@ -1,0 +1,112 @@
+@import "variables";
+@import "reset";
+@import "main";
+
+.about {
+    background-color: #4a3b4e;
+    background-image: url("/dist/images/about-fork/testmonials-bg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto 50%;
+    color: $white-color;
+    padding: 5rem 2rem 7rem;
+    margin-bottom: -.1rem;
+  
+    &__title {
+      font-size: 3.6rem;
+      line-height: 4.8rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+  
+    &__subtitle {
+      display: none;
+    }
+  
+    .review-list {
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4.5rem;
+      }
+  
+      &__item-logo {
+        margin-bottom: 3rem;
+      }
+  
+      &__item-text {
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+    }
+  }
+  
+  @media screen and (min-width: $tablet) {
+    .about {
+      background-size: cover;
+      padding: 8.5rem 1rem;
+  
+      &__title {
+        font-size: 4.2rem;
+        line-height: 4.4rem;
+      }
+  
+      &__subtitle {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        color: #A291A5;
+        padding-bottom: 2rem;
+        border-bottom: .2rem solid rgba(100, 87, 102, .2);
+        max-width: 70rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+  
+      .review-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 6rem 5rem;
+        max-width: 77rem;
+        margin: 0 auto;
+  
+        &__item {
+          margin-bottom: 0;
+          align-self: baseline;
+        }
+      }
+    }
+  }
+  
+  @media screen and (min-width: $desctop) {
+    .about {
+      padding: 10rem 6rem 8rem;
+  
+      &__title {
+        font-weight: bold;
+        font-size: 4.8rem;
+        line-height: 5rem;
+        margin-bottom: 8rem;
+      }
+  
+      &__subtitle {
+        max-width: 88rem;
+        margin: 6rem auto 0 auto;
+      }
+  
+      .review-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: 120rem;
+        gap: 9rem 9rem
+      }
+    }
+  }
+  
